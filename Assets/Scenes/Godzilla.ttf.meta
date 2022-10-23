@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8ae49d07632fa02478d0749a0d4d5aaf
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Godzilla
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1042538776504794980ad7b4e86b47ff, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
