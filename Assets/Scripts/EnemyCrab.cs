@@ -20,10 +20,6 @@ public class EnemyCrab : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Time.timeScale = 0;
-            DeadPlayerUI.enabled = true;
-        }
+
     }
 }
