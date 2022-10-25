@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyCrab : MonoBehaviour
 {
     public Text DeadPlayerUI;
+    public int CrabHealth = 5;
     void Start()
     {
         DeadPlayerUI.enabled = false;
@@ -15,9 +16,14 @@ public class EnemyCrab : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PistolBullet"))
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PistolShoot>().WhenEnemyIsKilled();
+            CrabHealth--;
             
-            Destroy(this.gameObject);
+            if(CrabHealth < 0)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PistolShoot>().WhenEnemyIsKilled();
+
+                Destroy(this.gameObject);
+            }
         }
 
         if (collision.gameObject.CompareTag("Player"))
