@@ -17,6 +17,10 @@ public class EnemyAI : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        animator.SetBool("IsAttacking", false);
+    }
 
     private void SetDestination()
     {
@@ -30,6 +34,15 @@ public class EnemyAI : MonoBehaviour
             agent.destination = other.gameObject.transform.position;
             InvokeRepeating(nameof(SetDestination), 0f, 1f);
             animator.Play("Armature|Walk_Cycle_1");
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            animator.Play("Armature|Attack_4");
+            animator.SetBool("IsAttacking", true);
         }
     }
 

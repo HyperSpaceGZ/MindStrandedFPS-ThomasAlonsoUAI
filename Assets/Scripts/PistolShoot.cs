@@ -20,6 +20,10 @@ public class PistolShoot : MonoBehaviour
     public int KillCount = 0;
     public Text KillCountText;
 
+    //Lives Info
+    public int Lives;
+    public Text LivesNumberText;
+
     //Win Text
     public Text WinText;
     
@@ -27,6 +31,7 @@ public class PistolShoot : MonoBehaviour
     {
         WinText.enabled = false;
         Bullets = 20;
+        Lives = 3;
     }
 
     // Update is called once per frame
@@ -68,7 +73,6 @@ public class PistolShoot : MonoBehaviour
     public void WhenPicksUpAmmo()
     {
         Bullets = 20;
-
     }
 
     public void WhenEnemyIsKilled()
